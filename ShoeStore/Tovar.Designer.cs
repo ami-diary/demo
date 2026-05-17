@@ -17,9 +17,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tovar));
             this.pTools = new System.Windows.Forms.Panel();
-            this.comboBoxSurplus = new System.Windows.Forms.ComboBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.ComboBoxSurplus = new System.Windows.Forms.ComboBox();
             this.ComboBoxSupplier = new System.Windows.Forms.ComboBox();
-            this.btnSearch = new System.Windows.Forms.TextBox();
             this.ostatok = new System.Windows.Forms.Label();
             this.postavshik = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.Label();
@@ -28,15 +28,19 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.btnOrders = new System.Windows.Forms.Button();
             this.pTools.SuspendLayout();
             this.pTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // pTools
             // 
-            this.pTools.Controls.Add(this.comboBoxSurplus);
+            this.pTools.Controls.Add(this.btnOrders);
+            this.pTools.Controls.Add(this.btnAddProduct);
+            this.pTools.Controls.Add(this.textBoxSearch);
+            this.pTools.Controls.Add(this.ComboBoxSurplus);
             this.pTools.Controls.Add(this.ComboBoxSupplier);
-            this.pTools.Controls.Add(this.btnSearch);
             this.pTools.Controls.Add(this.ostatok);
             this.pTools.Controls.Add(this.postavshik);
             this.pTools.Controls.Add(this.txtSearch);
@@ -47,28 +51,28 @@
             this.pTools.Size = new System.Drawing.Size(1172, 50);
             this.pTools.TabIndex = 2;
             // 
-            // comboBoxSurplus
+            // textBoxSearch
             // 
-            this.comboBoxSurplus.FormattingEnabled = true;
-            this.comboBoxSurplus.Location = new System.Drawing.Point(670, 12);
-            this.comboBoxSurplus.Name = "comboBoxSurplus";
-            this.comboBoxSurplus.Size = new System.Drawing.Size(131, 27);
-            this.comboBoxSurplus.TabIndex = 7;
+            this.textBoxSearch.Location = new System.Drawing.Point(92, 11);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(168, 26);
+            this.textBoxSearch.TabIndex = 0;
+            // 
+            // ComboBoxSurplus
+            // 
+            this.ComboBoxSurplus.FormattingEnabled = true;
+            this.ComboBoxSurplus.Location = new System.Drawing.Point(670, 12);
+            this.ComboBoxSurplus.Name = "ComboBoxSurplus";
+            this.ComboBoxSurplus.Size = new System.Drawing.Size(131, 27);
+            this.ComboBoxSurplus.TabIndex = 7;
             // 
             // ComboBoxSupplier
             // 
             this.ComboBoxSupplier.FormattingEnabled = true;
-            this.ComboBoxSupplier.Location = new System.Drawing.Point(394, 11);
+            this.ComboBoxSupplier.Location = new System.Drawing.Point(394, 10);
             this.ComboBoxSupplier.Name = "ComboBoxSupplier";
             this.ComboBoxSupplier.Size = new System.Drawing.Size(174, 27);
             this.ComboBoxSupplier.TabIndex = 6;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(92, 11);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(169, 26);
-            this.btnSearch.TabIndex = 3;
             // 
             // ostatok
             // 
@@ -153,6 +157,28 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Список товаров";
             // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.btnAddProduct.Location = new System.Drawing.Point(820, 7);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(149, 35);
+            this.btnAddProduct.TabIndex = 8;
+            this.btnAddProduct.Text = "Добавить товар ";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
+            // btnOrders
+            // 
+            this.btnOrders.Font = new System.Drawing.Font("Times New Roman", 9F);
+            this.btnOrders.Location = new System.Drawing.Point(988, 5);
+            this.btnOrders.Name = "btnOrders";
+            this.btnOrders.Size = new System.Drawing.Size(144, 35);
+            this.btnOrders.TabIndex = 9;
+            this.btnOrders.Text = "Заказы";
+            this.btnOrders.UseVisualStyleBackColor = true;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
+            // 
             // Tovar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -183,7 +209,9 @@
         private System.Windows.Forms.Label postavshik;
         private System.Windows.Forms.Label txtSearch;
         private System.Windows.Forms.ComboBox ComboBoxSupplier;
-        private System.Windows.Forms.TextBox btnSearch;
-        private System.Windows.Forms.ComboBox comboBoxSurplus;
+        private System.Windows.Forms.ComboBox ComboBoxSurplus;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button btnOrders;
+        private System.Windows.Forms.Button btnAddProduct;
     }
 }

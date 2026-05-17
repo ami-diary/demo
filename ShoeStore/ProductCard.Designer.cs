@@ -29,29 +29,29 @@
         private void InitializeComponent()
         {
             this.pRight = new System.Windows.Forms.Panel();
-            this.tip = new System.Windows.Forms.TableLayoutPanel();
-            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
-            this.labelHeader = new System.Windows.Forms.Label();
-            this.lblHeader = new System.Windows.Forms.Label();
-            this.labelOpisanie = new System.Windows.Forms.Label();
-            this.lblDescValue = new System.Windows.Forms.Label();
-            this.labelProizvod = new System.Windows.Forms.Label();
-            this.lblManufacturerValue = new System.Windows.Forms.Label();
-            this.labelPostavshik = new System.Windows.Forms.Label();
-            this.lblSupplierValue = new System.Windows.Forms.Label();
-            this.labelPrice = new System.Windows.Forms.Label();
-            this.labelEd = new System.Windows.Forms.Label();
-            this.lblUnit = new System.Windows.Forms.Label();
-            this.labelCount = new System.Windows.Forms.Label();
-            this.lblCount = new System.Windows.Forms.Label();
             this.lblDiscountValue = new System.Windows.Forms.Label();
+            this.tip = new System.Windows.Forms.TableLayoutPanel();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.labelCount = new System.Windows.Forms.Label();
+            this.lblUnit = new System.Windows.Forms.Label();
+            this.labelEd = new System.Windows.Forms.Label();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.lblSupplierValue = new System.Windows.Forms.Label();
+            this.labelPostavshik = new System.Windows.Forms.Label();
+            this.lblManufacturerValue = new System.Windows.Forms.Label();
+            this.labelProizvod = new System.Windows.Forms.Label();
+            this.lblDescValue = new System.Windows.Forms.Label();
+            this.lblHeader = new System.Windows.Forms.Label();
+            this.labelHeader = new System.Windows.Forms.Label();
+            this.labelOpisanie = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.TableLayoutPanel();
             this.lblOldPrice = new System.Windows.Forms.Label();
             this.lblNewPrice = new System.Windows.Forms.Label();
+            this.pictureBoxPhoto = new System.Windows.Forms.PictureBox();
             this.pRight.SuspendLayout();
             this.tip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.lblPrice.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).BeginInit();
             this.SuspendLayout();
             // 
             // pRight
@@ -63,6 +63,16 @@
             this.pRight.Name = "pRight";
             this.pRight.Size = new System.Drawing.Size(269, 345);
             this.pRight.TabIndex = 0;
+            // 
+            // lblDiscountValue
+            // 
+            this.lblDiscountValue.AutoSize = true;
+            this.lblDiscountValue.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDiscountValue.Location = new System.Drawing.Point(4, 4);
+            this.lblDiscountValue.Name = "lblDiscountValue";
+            this.lblDiscountValue.Size = new System.Drawing.Size(196, 22);
+            this.lblDiscountValue.TabIndex = 0;
+            this.lblDiscountValue.Text = "Действующая скидка:";
             // 
             // tip
             // 
@@ -86,145 +96,15 @@
             this.tip.Location = new System.Drawing.Point(285, 0);
             this.tip.Name = "tip";
             this.tip.RowCount = 7;
-            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.97701F));
-            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.02299F));
-            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.47826F));
+            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.52174F));
             this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
-            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
+            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 52F));
+            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 48F));
             this.tip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tip.Size = new System.Drawing.Size(609, 342);
             this.tip.TabIndex = 1;
-            // 
-            // pictureBoxPhoto
-            // 
-            this.pictureBoxPhoto.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBoxPhoto.Location = new System.Drawing.Point(0, 0);
-            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
-            this.pictureBoxPhoto.Size = new System.Drawing.Size(279, 345);
-            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxPhoto.TabIndex = 2;
-            this.pictureBoxPhoto.TabStop = false;
-            // 
-            // labelHeader
-            // 
-            this.labelHeader.AutoSize = true;
-            this.labelHeader.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.labelHeader.Location = new System.Drawing.Point(3, 0);
-            this.labelHeader.Name = "labelHeader";
-            this.labelHeader.Size = new System.Drawing.Size(291, 20);
-            this.labelHeader.TabIndex = 0;
-            this.labelHeader.Text = "Категория | Наименование товара";
-            // 
-            // lblHeader
-            // 
-            this.lblHeader.AutoSize = true;
-            this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
-            this.lblHeader.Location = new System.Drawing.Point(306, 0);
-            this.lblHeader.Name = "lblHeader";
-            this.lblHeader.Size = new System.Drawing.Size(291, 20);
-            this.lblHeader.TabIndex = 1;
-            this.lblHeader.Text = "Категория | Наименование товара";
-            // 
-            // labelOpisanie
-            // 
-            this.labelOpisanie.AutoSize = true;
-            this.labelOpisanie.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelOpisanie.Location = new System.Drawing.Point(3, 42);
-            this.labelOpisanie.Name = "labelOpisanie";
-            this.labelOpisanie.Size = new System.Drawing.Size(86, 20);
-            this.labelOpisanie.TabIndex = 2;
-            this.labelOpisanie.Text = "Описание";
-            // 
-            // lblDescValue
-            // 
-            this.lblDescValue.AutoSize = true;
-            this.lblDescValue.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDescValue.Location = new System.Drawing.Point(306, 42);
-            this.lblDescValue.Name = "lblDescValue";
-            this.lblDescValue.Size = new System.Drawing.Size(86, 20);
-            this.lblDescValue.TabIndex = 3;
-            this.lblDescValue.Text = "Описание";
-            // 
-            // labelProizvod
-            // 
-            this.labelProizvod.AutoSize = true;
-            this.labelProizvod.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelProizvod.Location = new System.Drawing.Point(3, 92);
-            this.labelProizvod.Name = "labelProizvod";
-            this.labelProizvod.Size = new System.Drawing.Size(126, 20);
-            this.labelProizvod.TabIndex = 4;
-            this.labelProizvod.Text = "Производитель";
-            // 
-            // lblManufacturerValue
-            // 
-            this.lblManufacturerValue.AutoSize = true;
-            this.lblManufacturerValue.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblManufacturerValue.Location = new System.Drawing.Point(306, 92);
-            this.lblManufacturerValue.Name = "lblManufacturerValue";
-            this.lblManufacturerValue.Size = new System.Drawing.Size(126, 20);
-            this.lblManufacturerValue.TabIndex = 5;
-            this.lblManufacturerValue.Text = "Производитель";
-            // 
-            // labelPostavshik
-            // 
-            this.labelPostavshik.AutoSize = true;
-            this.labelPostavshik.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPostavshik.Location = new System.Drawing.Point(3, 143);
-            this.labelPostavshik.Name = "labelPostavshik";
-            this.labelPostavshik.Size = new System.Drawing.Size(97, 20);
-            this.labelPostavshik.TabIndex = 6;
-            this.labelPostavshik.Text = "Поставщик";
-            // 
-            // lblSupplierValue
-            // 
-            this.lblSupplierValue.AutoSize = true;
-            this.lblSupplierValue.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblSupplierValue.Location = new System.Drawing.Point(306, 143);
-            this.lblSupplierValue.Name = "lblSupplierValue";
-            this.lblSupplierValue.Size = new System.Drawing.Size(97, 20);
-            this.lblSupplierValue.TabIndex = 7;
-            this.lblSupplierValue.Text = "Поставщик";
-            // 
-            // labelPrice
-            // 
-            this.labelPrice.AutoSize = true;
-            this.labelPrice.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelPrice.Location = new System.Drawing.Point(3, 198);
-            this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(48, 20);
-            this.labelPrice.TabIndex = 8;
-            this.labelPrice.Text = "Цена";
-            // 
-            // labelEd
-            // 
-            this.labelEd.AutoSize = true;
-            this.labelEd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelEd.Location = new System.Drawing.Point(3, 249);
-            this.labelEd.Name = "labelEd";
-            this.labelEd.Size = new System.Drawing.Size(77, 20);
-            this.labelEd.TabIndex = 10;
-            this.labelEd.Text = "Единица";
-            // 
-            // lblUnit
-            // 
-            this.lblUnit.AutoSize = true;
-            this.lblUnit.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblUnit.Location = new System.Drawing.Point(306, 249);
-            this.lblUnit.Name = "lblUnit";
-            this.lblUnit.Size = new System.Drawing.Size(77, 20);
-            this.lblUnit.TabIndex = 11;
-            this.lblUnit.Text = "Единица";
-            // 
-            // labelCount
-            // 
-            this.labelCount.AutoSize = true;
-            this.labelCount.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelCount.Location = new System.Drawing.Point(3, 296);
-            this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(99, 20);
-            this.labelCount.TabIndex = 12;
-            this.labelCount.Text = "Количество";
             // 
             // lblCount
             // 
@@ -236,15 +116,125 @@
             this.lblCount.TabIndex = 13;
             this.lblCount.Text = "Количество";
             // 
-            // lblDiscountValue
+            // labelCount
             // 
-            this.lblDiscountValue.AutoSize = true;
-            this.lblDiscountValue.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDiscountValue.Location = new System.Drawing.Point(4, 4);
-            this.lblDiscountValue.Name = "lblDiscountValue";
-            this.lblDiscountValue.Size = new System.Drawing.Size(196, 22);
-            this.lblDiscountValue.TabIndex = 0;
-            this.lblDiscountValue.Text = "Действующая скидка:";
+            this.labelCount.AutoSize = true;
+            this.labelCount.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelCount.Location = new System.Drawing.Point(3, 296);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(99, 20);
+            this.labelCount.TabIndex = 12;
+            this.labelCount.Text = "Количество";
+            // 
+            // lblUnit
+            // 
+            this.lblUnit.AutoSize = true;
+            this.lblUnit.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblUnit.Location = new System.Drawing.Point(306, 248);
+            this.lblUnit.Name = "lblUnit";
+            this.lblUnit.Size = new System.Drawing.Size(77, 20);
+            this.lblUnit.TabIndex = 11;
+            this.lblUnit.Text = "Единица";
+            // 
+            // labelEd
+            // 
+            this.labelEd.AutoSize = true;
+            this.labelEd.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelEd.Location = new System.Drawing.Point(3, 248);
+            this.labelEd.Name = "labelEd";
+            this.labelEd.Size = new System.Drawing.Size(77, 20);
+            this.labelEd.TabIndex = 10;
+            this.labelEd.Text = "Единица";
+            // 
+            // labelPrice
+            // 
+            this.labelPrice.AutoSize = true;
+            this.labelPrice.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPrice.Location = new System.Drawing.Point(3, 195);
+            this.labelPrice.Name = "labelPrice";
+            this.labelPrice.Size = new System.Drawing.Size(48, 20);
+            this.labelPrice.TabIndex = 8;
+            this.labelPrice.Text = "Цена";
+            // 
+            // lblSupplierValue
+            // 
+            this.lblSupplierValue.AutoSize = true;
+            this.lblSupplierValue.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblSupplierValue.Location = new System.Drawing.Point(306, 143);
+            this.lblSupplierValue.Name = "lblSupplierValue";
+            this.lblSupplierValue.Size = new System.Drawing.Size(97, 20);
+            this.lblSupplierValue.TabIndex = 7;
+            this.lblSupplierValue.Text = "Поставщик";
+            // 
+            // labelPostavshik
+            // 
+            this.labelPostavshik.AutoSize = true;
+            this.labelPostavshik.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPostavshik.Location = new System.Drawing.Point(3, 143);
+            this.labelPostavshik.Name = "labelPostavshik";
+            this.labelPostavshik.Size = new System.Drawing.Size(97, 20);
+            this.labelPostavshik.TabIndex = 6;
+            this.labelPostavshik.Text = "Поставщик";
+            // 
+            // lblManufacturerValue
+            // 
+            this.lblManufacturerValue.AutoSize = true;
+            this.lblManufacturerValue.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblManufacturerValue.Location = new System.Drawing.Point(306, 88);
+            this.lblManufacturerValue.Name = "lblManufacturerValue";
+            this.lblManufacturerValue.Size = new System.Drawing.Size(126, 20);
+            this.lblManufacturerValue.TabIndex = 5;
+            this.lblManufacturerValue.Text = "Производитель";
+            // 
+            // labelProizvod
+            // 
+            this.labelProizvod.AutoSize = true;
+            this.labelProizvod.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelProizvod.Location = new System.Drawing.Point(3, 88);
+            this.labelProizvod.Name = "labelProizvod";
+            this.labelProizvod.Size = new System.Drawing.Size(126, 20);
+            this.labelProizvod.TabIndex = 4;
+            this.labelProizvod.Text = "Производитель";
+            // 
+            // lblDescValue
+            // 
+            this.lblDescValue.AutoSize = true;
+            this.lblDescValue.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblDescValue.Location = new System.Drawing.Point(306, 38);
+            this.lblDescValue.Name = "lblDescValue";
+            this.lblDescValue.Size = new System.Drawing.Size(86, 20);
+            this.lblDescValue.TabIndex = 3;
+            this.lblDescValue.Text = "Описание";
+            // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
+            this.lblHeader.Location = new System.Drawing.Point(306, 0);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(291, 20);
+            this.lblHeader.TabIndex = 1;
+            this.lblHeader.Text = "Категория | Наименование товара";
+            // 
+            // labelHeader
+            // 
+            this.labelHeader.AutoSize = true;
+            this.labelHeader.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Bold);
+            this.labelHeader.Location = new System.Drawing.Point(3, 0);
+            this.labelHeader.Name = "labelHeader";
+            this.labelHeader.Size = new System.Drawing.Size(291, 20);
+            this.labelHeader.TabIndex = 0;
+            this.labelHeader.Text = "Категория | Наименование товара";
+            // 
+            // labelOpisanie
+            // 
+            this.labelOpisanie.AutoSize = true;
+            this.labelOpisanie.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelOpisanie.Location = new System.Drawing.Point(3, 38);
+            this.labelOpisanie.Name = "labelOpisanie";
+            this.labelOpisanie.Size = new System.Drawing.Size(86, 20);
+            this.labelOpisanie.TabIndex = 2;
+            this.labelOpisanie.Text = "Описание";
             // 
             // lblPrice
             // 
@@ -253,15 +243,15 @@
             this.lblPrice.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.lblPrice.Controls.Add(this.lblOldPrice, 0, 0);
             this.lblPrice.Controls.Add(this.lblNewPrice, 1, 0);
-            this.lblPrice.Location = new System.Drawing.Point(306, 201);
+            this.lblPrice.Location = new System.Drawing.Point(306, 198);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.RowCount = 2;
-            this.lblPrice.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.lblPrice.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.lblPrice.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 82.97872F));
+            this.lblPrice.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.02128F));
             this.lblPrice.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.lblPrice.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.lblPrice.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.lblPrice.Size = new System.Drawing.Size(300, 45);
+            this.lblPrice.Size = new System.Drawing.Size(300, 47);
             this.lblPrice.TabIndex = 14;
             // 
             // lblOldPrice
@@ -284,6 +274,16 @@
             this.lblNewPrice.TabIndex = 1;
             this.lblNewPrice.Text = "Новая цена";
             // 
+            // pictureBoxPhoto
+            // 
+            this.pictureBoxPhoto.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBoxPhoto.Location = new System.Drawing.Point(0, 0);
+            this.pictureBoxPhoto.Name = "pictureBoxPhoto";
+            this.pictureBoxPhoto.Size = new System.Drawing.Size(279, 345);
+            this.pictureBoxPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxPhoto.TabIndex = 2;
+            this.pictureBoxPhoto.TabStop = false;
+            // 
             // ProductCard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -297,9 +297,9 @@
             this.pRight.PerformLayout();
             this.tip.ResumeLayout(false);
             this.tip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.lblPrice.ResumeLayout(false);
             this.lblPrice.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPhoto)).EndInit();
             this.ResumeLayout(false);
 
         }

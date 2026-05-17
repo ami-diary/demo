@@ -57,5 +57,99 @@ namespace ShoeStore.Data
             }
             return list;
         }
+
+        public void Add(Product product)
+        {
+            using (SqlConnection myConnection = new SqlConnection(connectionString))
+            {
+                myConnection.Open();
+                string sql = @"
+                    INSERT INTO [dbo].[Товары] 
+                    ([Артикул], [Наименование товара], [Единица измерения], [Цена], 
+                     [Поставщик], [Производитель], [Категория товара], [Действующая скидка], 
+                     [Кол-во на складе], [Описание товара])
+                    VALUES 
+                    (@Article, @Name, @Unit, @Price, @Supplier, @Manufacturer, 
+                     @Category, @DiscountPercent, @StockQty, @Description)";
+
+                using (SqlCommand cmd = new SqlCommand(sql, myConnection))
+                {
+                    cmd.Parameters.AddWithValue("@Article", product.Article);
+                    cmd.Parameters.AddWithValue("@Name", product.Name);
+                    cmd.Parameters.AddWithValue("@Unit", product.Unit);
+                    cmd.Parameters.AddWithValue("@Price", product.Price);
+                    cmd.Parameters.AddWithValue("@Supplier", product.Supplier);
+                    cmd.Parameters.AddWithValue("@Manufacturer", product.Manufacturer);
+                    cmd.Parameters.AddWithValue("@Category", product.Category);
+                    cmd.Parameters.AddWithValue("@DiscountPercent", product.DiscountPercent);
+                    cmd.Parameters.AddWithValue("@StockQty", product.StockQty);
+                    cmd.Parameters.AddWithValue("@Description", product.Description);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Update(Product product)
+        {
+            using (SqlConnection myConnection = new SqlConnection(connectionString))
+            {
+                myConnection.Open();
+                string sql = @"
+                    UPDATE [dbo].[Товары] SET
+                        [Артикул] = @Article,
+                        [Наименование товара] = @Name,
+                        [Единица измерения] = @Unit,
+                        [Цена] = @Price,
+                        [Поставщик] = @Supplier,
+                        [Производитель] = @Manufacturer,
+                        [Категория товара] = @Category,
+                        [Действующая скидка] = @DiscountPercent,
+                        [Кол-во на складе] = @StockQty,
+                        [Описание товара] = @Description
+                    WHERE [Номер товара] = @Id";
+
+                using (SqlCommand cmd = new SqlCommand(sql, myConnection))
+                {
+                    cmd.Parameters.AddWithValue("@Id", product.Id);
+                    cmd.Parameters.AddWithValue("@Article", product.Article);
+                    cmd.Parameters.AddWithValue("@Name", product.Name);
+                    cmd.Parameters.AddWithValue("@Unit", product.Unit);
+                    cmd.Parameters.AddWithValue("@Price", product.Price);
+                    cmd.Parameters.AddWithValue("@Supplier", product.Supplier);
+                    cmd.Parameters.AddWithValue("@Manufacturer", product.Manufacturer);
+                    cmd.Parameters.AddWithValue("@Category", product.Category);
+                    cmd.Parameters.AddWithValue("@DiscountPercent", product.DiscountPercent);
+                    cmd.Parameters.AddWithValue("@StockQty", product.StockQty);
+                    cmd.Parameters.AddWithValue("@Description", product.Description);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void Delete(int productId)
+        {
+            using (SqlConnection myConnection = new SqlConnection(connectionString))
+            {
+                myConnection.Open();
+
+                // Проверяем, есть ли товар в заказах
+                string checkSql = "SELECT COUNT(*) FROM [dbo].[Позиции] WHERE [Номер товара] = @Id";
+                using (SqlCommand checkCmd = new SqlCommand(checkSql, myConnection))
+                {
+                    checkCmd.Parameters.AddWithValue("@Id", productId);
+                    int count = Convert.ToInt32(checkCmd.ExecuteScalar());
+                    if (count > 0)
+                        throw new InvalidOperationException("Товар присутствует в заказах и не может быть удалён.");
+                }
+
+                // Удаляем товар
+                string deleteSql = "DELETE FROM [dbo].[Товары] WHERE [Номер товара] = @Id";
+                using (SqlCommand deleteCmd = new SqlCommand(deleteSql, myConnection))
+                {
+                    deleteCmd.Parameters.AddWithValue("@Id", productId);
+                    deleteCmd.ExecuteNonQuery();
+                }
+            }
+        }
     }
 }
